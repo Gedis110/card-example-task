@@ -1,0 +1,53 @@
+body{
+    background-color: rgb(22, 80, 106);
+}
+.cont{
+margin-top: 200px;
+display: flex;
+gap: 100px;
+justify-content: center;
+align-items: center;
+}
+
+.cards{
+    position: relative;
+    border-radius: 50px;
+    height: 700px;
+    width: 400px;
+
+}
+
+.cards::before{
+    border-radius: 50px;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px) grayscale(100);
+}
+
+.card-1::before{
+    background-image: url("../img/img-1.jpg");
+}
+.card-2::before{
+    background-image: url("../img/img-2.jpg");
+}
+.card-3::before{
+    background-image: url("../img/img-3.jpg");
+}
+.card-4::before{
+    background-image: url("../img/img-4.jpg");
+}
+
+
+.cards:hover::before{
+    filter: blur(0) grayscale(0);
+}
+
+.card-txt{
+    position: relative;
+    color: white;
+    margin-left: 50px;
+    margin-top: 30px;
+}
